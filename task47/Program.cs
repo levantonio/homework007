@@ -1,4 +1,4 @@
-﻿// Задача 47. 
+﻿// Задача 47.
 // Задайте двумерный массив размером m×n,
 // заполненный случайными вещественными числами.
 
@@ -20,12 +20,12 @@ double[,] CreateMatrixRndDouble(int rows, int columns, int min, int max)
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
             double num = rnd.NextDouble() * (max - min) + min;
-            matrix[i,j] = Math.Round(num, 1); //i = индекс массива
+            matrix[i, j] = Math.Round(num, 1); //i = индекс массива
         }
     }
     return matrix;
 }
- 
+
 void PrintMatrix(double[,] matrix)
 {
     for (int i = 0; i < matrix.GetLength(0); i++)
@@ -34,23 +34,13 @@ void PrintMatrix(double[,] matrix)
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
             if (j < matrix.GetLength(1) - 1)
-                Console.Write($"{matrix[i, j], 4 }, "); //выводим последний элемент без запятой в конце!!!!!
+                Console.Write($"{matrix[i, j], 4}, "); //выводим последний элемент без запятой в конце!!!!!
             else
                 Console.Write($"{matrix[i, j], 4} ");
         }
-    Console.WriteLine("]");
+        Console.WriteLine("]");
     }
-    
 }
-
-
 
 double[,] arr2D = CreateMatrixRndDouble(3, 4, -9, 9);
 PrintMatrix(arr2D);
-
-
-   
-
-
-
-
